@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0907" />
+  <meta name="description" content="Parichaya 2026 — Freshers celebration at Nabakrushna Choudhury College of Teacher Education, Anugola." />
+  <title>ପରିଚୟ 2026 | Freshers' 2026</title>
+
+  <!-- Elegant display fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+Oriya:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Used only in the browser to export the invitation card as PNG -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="grain"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Parichaya 2026 home">
+      <span class="brand-mark">✦</span>
+      <span>ପରିଚୟ <small>2026</small></span>
+    </a>
+    <a class="topbar-link" href="#create">Create Invite <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="hero-inner">
+        <div class="logo-shell reveal">
+          <img src="assets/college-logo.png" alt="Nabakrushna Choudhury College of Teacher Education logo" />
+        </div>
+
+        <p class="eyebrow reveal delay-1">NABAKRUSHNA CHOUDHURY COLLEGE OF TEACHER EDUCATION • ANUGOLA</p>
+
+        <h1 class="hero-title reveal delay-2">
+          <span class="odia-title">ପରିଚୟ</span>
+          <span class="hero-year">FRESHERS' <em>2026</em></span>
+        </h1>
+
+        <p class="hero-copy reveal delay-3">
+          A new beginning. New bonds. New memories.
+          <br />
+          Come celebrate the first chapter of your college journey.
+        </p>
+
+        <div class="event-meta reveal delay-4">
+          <div>
+            <span>DATE</span>
+            <strong>25 SEPTEMBER 2026</strong>
+          </div>
+          <div class="meta-divider"></div>
+          <div>
+            <span>TIME</span>
+            <strong>9:30 AM ONWARDS</strong>
+          </div>
+          <div class="meta-divider"></div>
+          <div>
+            <span>VENUE</span>
+            <strong>STAGE AREA</strong>
+          </div>
+        </div>
+
+        <a class="primary-btn reveal delay-5" href="#create">
+          <span>Create My Invitation</span>
+          <span class="btn-arrow">→</span>
+        </a>
+
+        <div class="scroll-hint">
+          <span class="line"></span>
+          <span>SCROLL TO PERSONALIZE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATE -->
+    <section id="create" class="section create-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">MAKE IT YOURS</p>
+        <h2>Create your <span>personal invitation</span></h2>
+        <p>Enter your name and add a photo. Your invitation card updates instantly.</p>
+      </div>
+
+      <div class="creator-grid">
+        <div class="glass-card form-card reveal">
+          <div class="step-badge">01</div>
+
+          <label for="studentName">Your name</label>
+          <input id="studentName" class="text-input" type="text" maxlength="36"
+                 placeholder="e.g. Priyanka Das" autocomplete="name" />
+
+          <label for="photoInput">Your photograph</label>
+          <label class="upload-box" for="photoInput">
+            <input id="photoInput" type="file" accept="image/*" />
+            <span class="upload-icon">＋</span>
+            <strong>Choose a photo</strong>
+            <small>JPG, PNG or WEBP • best in portrait</small>
+          </label>
+
+          <div class="mini-preview-row">
+            <div class="mini-avatar" id="miniAvatar">
+              <span>PHOTO</span>
+            </div>
+            <div>
+              <strong id="miniName">Your Name</strong>
+              <p>Preview updates live</p>
+            </div>
+          </div>
+
+          <button id="generateBtn" class="secondary-btn" type="button">
+            <span>Generate my invitation</span>
+            <span>✦</span>
+          </button>
+
+          <p class="privacy-note">Your photo is processed in your browser for the card preview and download.</p>
+        </div>
+
+        <!-- Live preview -->
+        <div class="preview-wrap reveal delay-1">
+          <div class="preview-label">LIVE PREVIEW</div>
+          <div id="invitationCard" class="invitation-card">
+            <div class="card-glow"></div>
+            <div class="card-border"></div>
+
+            <div class="card-header">
+              <img src="assets/college-logo.png" alt="College logo" class="card-logo" />
+              <div class="card-college">
+                <div>NABAKRUSHNA CHOUDHURY</div>
+                <div>COLLEGE OF TEACHER EDUCATION</div>
+                <div>ANUGOLA</div>
+              </div>
+            </div>
+
+            <div class="card-event">
+              <div class="card-odia">ପରିଚୟ</div>
+              <div class="card-freshers">FRESHERS' <span>2026</span></div>
+            </div>
+
+            <div class="card-photo-frame">
+              <img id="cardPhoto" src="" alt="Student photo" />
+              <div id="photoPlaceholder" class="photo-placeholder">YOUR PHOTO</div>
+            </div>
+
+            <div class="card-greeting">DEAR <span id="cardName">YOUR NAME</span></div>
+
+            <p class="card-invite-copy">
+              You are warmly invited to celebrate<br />
+              the beginning of a beautiful new journey.
+            </p>
+
+            <div class="card-details">
+              <div><span>DATE</span><strong>25 SEP 2026</strong></div>
+              <div><span>TIME</span><strong>9:30 AM ONWARDS</strong></div>
+              <div><span>VENUE</span><strong>STAGE AREA</strong></div>
+            </div>
+
+            <div class="card-footer">
+              <span>LET'S MAKE MEMORIES WORTH REMEMBERING.</span>
+            </div>
+          </div>
+
+          <div class="preview-actions">
+            <button id="downloadBtn" class="download-btn" type="button">↓ Download Invitation</button>
+            <button id="shareBtn" class="ghost-btn" type="button">↗ Share page</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- READY -->
+    <section class="section ready-section">
+      <div class="ready-card reveal">
+        <div class="ready-sparkles">✦ ✧ ✦</div>
+        <p class="eyebrow">YOUR INVITATION IS READY</p>
+        <h2>See you at <span>ପରିଚୟ!</span></h2>
+        <p>Save your invitation, share the event page with your friends, and get ready for a memorable day.</p>
+        <a class="primary-btn compact" href="#note">
+          <span>Leave a note for seniors</span>
+          <span>↓</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- MESSAGE TO SENIORS -->
+    <section id="note" class="section note-section">
+      <div class="note-grid">
+        <div class="note-intro reveal">
+          <p class="eyebrow">A LITTLE SOMETHING FOR YOUR SENIORS</p>
+          <h2>💌 A Note to Our <span>Seniors</span></h2>
+          <p>
+            Have something to say before the celebration begins?
+            Write a short message and send it directly through WhatsApp.
+          </p>
+
+          <div class="note-hint">
+            <span>♡</span>
+            <div>
+              <strong>Make it personal</strong>
+              <small>Your name and message will be included automatically.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card message-card reveal delay-1">
+          <label for="seniorMessage">Your message</label>
+          <textarea id="seniorMessage" maxlength="500"
+            placeholder="Write something for your seniors…"></textarea>
+
+          <div class="message-bottom">
+            <span id="charCount">0 / 500</span>
+            <span>WhatsApp-ready</span>
+          </div>
+
+          <button id="sendWhatsAppBtn" class="whatsapp-btn" type="button">
+            <span class="wa-icon">◉</span>
+            <span>Send to seniors on WhatsApp</span>
+            <span>↗</span>
+          </button>
+
+          <p class="wa-note">
+            Your message will open in WhatsApp with the selected text pre-filled.
+            You can review it before sending.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-logo">
+        <img src="assets/college-logo.png" alt="College logo" />
+      </div>
+      <div>
+        <strong>ପରିଚୟ 2026</strong>
+        <p>Nabakrushna Choudhury College of Teacher Education, Anugola</p>
+      </div>
+      <div class="footer-right">25 • 09 • 2026</div>
+    </footer>
+  </main>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
